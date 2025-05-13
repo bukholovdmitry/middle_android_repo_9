@@ -31,7 +31,7 @@ class LoginViewModelTest {
     @Test
     fun `login with empty fields sets EmptyFieldsError`() = runTest {
         viewModel.login("", "")
-        Assert.assertEquals(viewModel.state, LoginScreenState.EmptyFieldsError)
+        Assert.assertEquals(viewModel.state.value, LoginScreenState.EmptyFieldsError)
     }
 
     @Test
